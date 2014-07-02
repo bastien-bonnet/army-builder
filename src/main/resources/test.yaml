@@ -1,0 +1,17 @@
+-
+  name: unit1
+  profiles:
+    -
+      name: 
+      M: 4
+      CC: 4
+    -
+      M: 8
+      CC: 3
+
+-
+  name: unit2
+  profiles:
+    -
+      M: 4
+      CC: 5
