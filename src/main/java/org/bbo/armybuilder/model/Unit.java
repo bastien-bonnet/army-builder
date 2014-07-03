@@ -20,6 +20,10 @@ public class Unit {
 	}
 	@Override
 	public String toString() {
-		return "Unit [name=" + name + ", profiles=" + profiles + "]";
+		StringBuilder unitRepresentation = new StringBuilder(name + "\n");
+		for (Profile profile : profiles) {
+			unitRepresentation.append("    " + profile.getName() + profile.toString() + "\n");
+		}
+		return unitRepresentation.toString();
 	}
 }

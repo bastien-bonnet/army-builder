@@ -1,17 +1,20 @@
--
-  name: unit1
-  profiles:
+  units:
     -
-      name: 
-      M: 4
-      CC: 4
-    -
-      M: 8
-      CC: 3
+      name: unit1
+      profiles:
+        -
+          name: knight
+          m: 4
+          cc: 4
+        -
+          name: horse
+          m: 8
+          cc: 3
 
--
-  name: unit2
-  profiles:
     -
-      M: 4
-      CC: 5
+      name: unit2
+      profiles:
+        -
+          name: swordsman
+          m: 4
+          cc: 5
