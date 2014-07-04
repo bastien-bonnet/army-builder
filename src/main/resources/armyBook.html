@@ -7,7 +7,11 @@
 	.profiles {
 		margin-left: 1em;
 	}
-	
+	.firstCellInRow {
+		text-align: right;
+		width: 15em;
+		padding-right: 1em;
+	}
 </style>
 </head>
 <body>
@@ -17,16 +21,16 @@
 		<table class="profiles">
 			<tr><th></th><th>M</th><th>CC</th></tr>
 			#foreach ($profile in $unit.getProfiles())
-				<tr><td>$profile.getName()</td><td>$profile.getM()</td><td>$profile.getCc()</td></tr>
+				<tr><td class="firstCellInRow">$profile.getName()</td><td>$profile.getM()</td><td>$profile.getCc()</td></tr>
 			#end
 		</table>
 	#end
 	
 	<h2>Special rules</h2>
 	#foreach ($rule in $army.getRules())
-		<br>
 		<p>$rule.getName()</p>
 		<p>$rule.getDescription()</p>
+		<br>
 	#end
 	
 	$inexistingParameter
