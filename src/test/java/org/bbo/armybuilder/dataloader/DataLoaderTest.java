@@ -24,7 +24,7 @@ public class DataLoaderTest {
 		Army army = DataLoader.load("src/main/resources/test.yaml");
 		String armyString = DataLoader.fillTemplateWithArmyData("src/main/resources/armyBook.html", army);
 
-		System.out.println(armyString);
+		System.out.println(army.toString());
 
 		for (Unit unit : army.getUnits()) {
 			assertThat(armyString).contains(unit.getName());
