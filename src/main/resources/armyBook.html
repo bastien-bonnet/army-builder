@@ -17,7 +17,7 @@
 <body>
 	<h2>Units</h2>	
 	#foreach ($unit in $army.getUnits())
-		<p>$unit.getName()<p>
+		<h3>$unit.getName()</h3>
 		<table class="profiles">
 			<tr><th></th><th>M</th><th>CC</th></tr>
 			#foreach ($profile in $unit.getProfiles())
@@ -37,7 +37,7 @@
 	
 	<h2>Special rules</h2>
 	#foreach ($rule in $army.getRules())
-		<p id="$rule.getName()">$rule.getName()</p>
+		<h3 id="$rule.getName()">$rule.getName()</h3>
 		<p>$rule.getDescription()</p>
 		<br>
 	#end
