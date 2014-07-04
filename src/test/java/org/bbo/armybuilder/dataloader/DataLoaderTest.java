@@ -3,6 +3,7 @@ package org.bbo.armybuilder.dataloader;
 import static org.fest.assertions.Assertions.assertThat;
 
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 
 import org.bbo.armybuilder.model.Army;
 import org.bbo.armybuilder.model.Unit;
@@ -28,5 +29,9 @@ public class DataLoaderTest {
 		for (Unit unit : army.getUnits()) {
 			assertThat(armyString).contains(unit.getName());
 		}
+
+		PrintWriter out = new PrintWriter("army-test.html");
+		out.println(armyString);
+		out.close();
 	}
 }
