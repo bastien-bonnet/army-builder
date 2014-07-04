@@ -35,7 +35,7 @@ public class DataLoader {
 		Template template = velocityEngine.getTemplate(templatePath);
 
 		VelocityContext velocityContext = new VelocityContext();
-		velocityContext.put("units", army.getUnits());
+		velocityContext.put("army", army);
 
 		StringWriter stringWriter = new StringWriter();
 		template.merge(velocityContext, stringWriter);

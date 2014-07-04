@@ -1,20 +1,30 @@
-  units:
-    -
-      name: unit1
-      profiles:
-        -
-          name: knight
-          m: 4
-          cc: 4
-        -
-          name: horse
-          m: 8
-          cc: 3
+name: Empire
+units:
+  -
+    name: unit1
+    profiles:
+      -
+        name: knight
+        m: 4
+        cc: 4
+      -
+        name: horse
+        m: 8
+        cc: 3
 
-    -
-      name: unit2
-      profiles:
-        -
-          name: swordsman
-          m: 4
-          cc: 5
+  -
+    name: unit2
+    profiles:
+      -
+        name: swordsman
+        m: 4
+        cc: 5
+
+rules:
+  -
+    name: rule 1
+    description: description of rule 1
+
+  -
+    name: rule 2
+    description: rule 2 is better than rule 1

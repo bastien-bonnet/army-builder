@@ -2,12 +2,31 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>$army.getName()</title>
+<style type="text/css">
+	.profiles {
+		margin-left: 1em;
+	}
+	
+</style>
 </head>
 <body>
+	<h2>Units</h2>	
+	#foreach ($unit in $army.getUnits())
+		<p>$unit.getName()<p>
+		<table class="profiles">
+			<tr><th></th><th>M</th><th>CC</th></tr>
+			#foreach ($profile in $unit.getProfiles())
+				<tr><td>$profile.getName()</td><td>$profile.getM()</td><td>$profile.getCc()</td></tr>
+			#end
+		</table>
+	#end
 	
-	#foreach ($unit in $units)
-		Unit: $unit.getName()
+	<h2>Special rules</h2>
+	#foreach ($rule in $army.getRules())
+		<br>
+		<p>$rule.getName()</p>
+		<p>$rule.getDescription()</p>
 	#end
 	
 	$inexistingParameter
