@@ -1,4 +1,14 @@
 name: Empire
+
+rules:
+  - &rule1
+    name: rule 1
+    description: description of rule 1
+
+  - &rule2
+    name: rule 2
+    description: rule 2 is better than rule 1
+
 units:
   -
     name: unit1
@@ -12,6 +22,10 @@ units:
         m: 8
         cc: 3
 
+    rules:
+      - *rule2
+      - *rule1
+
   -
     name: unit2
     profiles:
@@ -20,11 +34,3 @@ units:
         m: 4
         cc: 5
 
-rules:
-  -
-    name: rule 1
-    description: description of rule 1
-
-  -
-    name: rule 2
-    description: rule 2 is better than rule 1

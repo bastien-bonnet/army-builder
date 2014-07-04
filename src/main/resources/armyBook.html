@@ -23,12 +23,21 @@
 			#foreach ($profile in $unit.getProfiles())
 				<tr><td class="firstCellInRow">$profile.getName()</td><td>$profile.getM()</td><td>$profile.getCc()</td></tr>
 			#end
+			
+			Rules:
+			<ul>
+				#foreach ($rule in $unit.getRules())
+					<li><a href="#$rule.getName()">$rule.getName()</a></li>					
+				#end
+			</ul>
 		</table>
 	#end
 	
+	<div style="height: 1000px;"></div>
+	
 	<h2>Special rules</h2>
 	#foreach ($rule in $army.getRules())
-		<p>$rule.getName()</p>
+		<p id="$rule.getName()">$rule.getName()</p>
 		<p>$rule.getDescription()</p>
 		<br>
 	#end
