@@ -16,11 +16,11 @@ units:
       -
         name: knight
         m: 4
-        cc: 4
+        ws: 4
       -
         name: horse
         m: 8
-        cc: 3
+        ws: 3
 
     rules:
       - *rule2
@@ -32,5 +32,5 @@ units:
       -
         name: swordsman
         m: 4
-        cc: 5
+        ws: 5
 

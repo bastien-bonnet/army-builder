@@ -12,6 +12,9 @@
 		width: 15em;
 		padding-right: 1em;
 	}
+	td {
+		text-align: center;
+	}
 </style>
 </head>
 <body>
@@ -19,9 +22,31 @@
 	#foreach ($unit in $army.getUnits())
 		<h3>$unit.getName()</h3>
 		<table class="profiles">
-			<tr><th></th><th>M</th><th>CC</th></tr>
+			<tr>
+				<th></th>
+				<th>M</th>
+				<th>CC</th>
+				<th>CT</th>
+				<th>F</th>
+				<th>E</th>
+				<th>PV</th>
+				<th>I</th>
+				<th>A</th>
+				<th>Cd</th>
+			</tr>
 			#foreach ($profile in $unit.getProfiles())
-				<tr><td class="firstCellInRow">$profile.getName()</td><td>$profile.getM()</td><td>$profile.getCc()</td></tr>
+				<tr>
+					<td class="firstCellInRow">$profile.getName()</td>
+					<td>$profile.getM()</td>
+					<td>$profile.getWs()</td>
+					<td>$profile.getBs()</td>
+					<td>$profile.getS()</td>
+					<td>$profile.getT()</td>
+					<td>$profile.getW()</td>
+					<td>$profile.getI()</td>
+					<td>$profile.getA()</td>
+					<td>$profile.getLd()</td>
+				</tr>
 			#end
 			
 			Rules:
