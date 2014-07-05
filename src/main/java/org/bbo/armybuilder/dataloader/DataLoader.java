@@ -32,7 +32,7 @@ public class DataLoader {
 		VelocityEngine velocityEngine = new VelocityEngine();
 		velocityEngine.init();
 
-		Template template = velocityEngine.getTemplate(templatePath);
+		Template template = velocityEngine.getTemplate(templatePath, "UTF-8");
 
 		VelocityContext velocityContext = new VelocityContext();
 		velocityContext.put("army", army);
