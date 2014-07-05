@@ -26,6 +26,22 @@ units:
       - *rule2
       - *rule1
 
+    equipment:
+      - Arme lourde
+      - Armure lourde
+
+    options:
+      -
+        name: promouvoir 1 guerrier en porte-étendard
+        points: 10
+        options :
+          -
+            name: bannière runique jusqu'à un total de
+            points: 50
+      -
+        name: toute l'unité peut avoir des boucliers
+        pointsPerModel: 1
+
   -
     name: unit2
     profiles:

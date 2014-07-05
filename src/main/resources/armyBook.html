@@ -18,7 +18,7 @@
 </style>
 </head>
 <body>
-	<h2>Units</h2>	
+	<h2>Unités</h2>	
 	#foreach ($unit in $army.getUnits())
 		<h3>$unit.getName()</h3>
 		<table class="profiles">
@@ -48,15 +48,46 @@
 					<td>$profile.getLd()</td>
 				</tr>
 			#end
-			
-			Rules:
-			<ul>
-				#foreach ($rule in $unit.getRules())
-					<li><a href="#$rule.getName()">$rule.getName()</a></li>					
-				#end
-			</ul>
 		</table>
+			
+			
+		<h4>Règles spéciales :</h4>
+		<ul>
+			#foreach ($rule in $unit.getRules())
+				<li><a href="#$rule.getName()">$rule.getName()</a></li>					
+			#end
+		</ul>
+
+
+		<h4>Equipement :</h4>
+		<ul>
+			#foreach ($item in $unit.equipment)
+				<li>$item</li>
+			#end
+		</ul>
+		
+		
+		<h4>Options :</h4>
+		#macro(optionTemplate $option)
+			<li>
+				$option.getName() : #if ($option.getPointsPerModel() > 0) $option.getPointsPerModel() pt par figurine #else $option.getPoints() pt #end
+				<ul>
+					#foreach($innerOption in $option.getOptions())
+						#optionTemplate($innerOption)
+					#end				
+				</ul>
+			</li>
+		#end
+		<ul>
+			#foreach($option in $unit.getOptions())
+				#optionTemplate($option)
+			#end
+		</ul>
+			
 	#end
+	
+	
+	
 	
 	<div style="height: 1000px;"></div>
 	

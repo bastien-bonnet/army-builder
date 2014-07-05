@@ -7,6 +7,8 @@ public class Unit {
 	private String name;
 	private List<Profile> profiles = new ArrayList<Profile>();
 	private List<Rule> rules = new ArrayList<Rule>();
+	private List<String> equipment = new ArrayList<String>();
+	private List<Option> options = new ArrayList<Option>();
 
 	public String getName() {
 		return name;
@@ -26,6 +28,18 @@ public class Unit {
 	public void setRules(List<Rule> rules) {
 		this.rules = rules;
 	}
+	public List<String> getEquipment() {
+		return equipment;
+	}
+	public void setEquipment(List<String> equipment) {
+		this.equipment = equipment;
+	}
+	public List<Option> getOptions() {
+		return options;
+	}
+	public void setOptions(List<Option> options) {
+		this.options = options;
+	}
 	@Override
 	public String toString() {
 		StringBuilder unitRepresentation = new StringBuilder(name + "\n");
@@ -36,6 +50,14 @@ public class Unit {
 
 		for (Rule rule : rules) {
 			unitRepresentation.append(" " + rule.getName() + "\n");
+		}
+
+		for (String item : equipment) {
+			unitRepresentation.append(" " + item + "\n");
+		}
+
+		for (Option option : options) {
+			unitRepresentation.append(" " + option + "\n");
 		}
 		return unitRepresentation.toString();
 	}
