@@ -1,0 +1,12 @@
+templates :
+	-check if empty collection before drawing
+
+java :
+	generate file directly in main
+	manage exception when reading vm or writing export
+
+features:
+	type de troupe
+	taille d'unité
+	cout de l'unité
+	catégorie
