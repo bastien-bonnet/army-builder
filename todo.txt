@@ -10,3 +10,4 @@ features:
 	taille d'unité
 	cout de l'unité
 	catégorie
+	gérer les différents profils dans unités
