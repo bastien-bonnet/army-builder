@@ -18,9 +18,6 @@
 </style>
 </head>
 <body>
-	<h2>Unités Rares</h2>
-	
-	
 	#macro (unitTemplate $unit)	
 		<h3>$unit.getName()</h3>
 		<table class="profiles">
@@ -89,6 +86,12 @@
 	#end
 	
 	
+	<h2>Unités de base</h2>
+	#foreach ($unit in $army.getCoreUnits())
+		#unitTemplate($unit)
+	#end
+	
+	<h2>Unités Rares</h2>
 	#foreach ($unit in $army.getRareUnits())
 		#unitTemplate($unit)
 	#end

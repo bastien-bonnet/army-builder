@@ -1,13 +1,25 @@
 name: Empire
 
 rules:
-  - &rule1
+  -
+    &rule1
     name: rule 1
     description: description of rule 1
 
-  - &rule2
+  -
+    &rule2
     name: rule 2
     description: rule 2 is better than rule 1
+
+coreUnits:
+  -
+    name: Archers
+    profiles:
+      -
+        name: Archer
+        m: 4
+        ws: 3
+        bs: 4
 
 rareUnits:
   -
