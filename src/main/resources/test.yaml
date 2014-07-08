@@ -9,7 +9,7 @@ rules:
     name: rule 2
     description: rule 2 is better than rule 1
 
-units:
+rareUnits:
   -
     name: unit1
     profiles:

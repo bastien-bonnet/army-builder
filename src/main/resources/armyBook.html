@@ -18,8 +18,10 @@
 </style>
 </head>
 <body>
-	<h2>Unités</h2>	
-	#foreach ($unit in $army.getUnits())
+	<h2>Unités Rares</h2>
+	
+	
+	#macro (unitTemplate $unit)	
 		<h3>$unit.getName()</h3>
 		<table class="profiles">
 			<tr>
@@ -74,7 +76,7 @@
 				<ul>
 					#foreach($innerOption in $option.getOptions())
 						#optionTemplate($innerOption)
-					#end				
+					#end
 				</ul>
 			</li>
 		#end
@@ -84,6 +86,11 @@
 			#end
 		</ul>
 			
+	#end
+	
+	
+	#foreach ($unit in $army.getRareUnits())
+		#unitTemplate($unit)
 	#end
 	
 	

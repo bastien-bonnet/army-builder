@@ -16,7 +16,7 @@ public class DataLoaderTest {
 		final Army army = DataLoader.load("src/main/resources/test.yaml");
 
 		System.out.println(army);
-		assertThat(army.getUnits().size() > 0);
+		assertThat(army.getAllUnits().size() > 0);
 	}
 
 	@Test
@@ -26,7 +26,7 @@ public class DataLoaderTest {
 
 		System.out.println(army.toString());
 
-		for (Unit unit : army.getUnits()) {
+		for (Unit unit : army.getAllUnits()) {
 			assertThat(armyString).contains(unit.getName());
 		}
 
