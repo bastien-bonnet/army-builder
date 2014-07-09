@@ -6,8 +6,7 @@ java :
 	manage exception when reading vm or writing export
 
 features:
-	type de troupe
 	taille d'unité
 	cout de l'unité
-	catégorie
+	catégorie: cavalerie, infanterie
 	gérer les différents profils dans unités
