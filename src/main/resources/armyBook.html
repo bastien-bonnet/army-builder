@@ -86,8 +86,23 @@
 	#end
 	
 	
+	<h2>Seigneurs</h2>
+	#foreach ($unit in $army.getLords())
+		#unitTemplate($unit)
+	#end
+	
+	<h2>Héros</h2>
+	#foreach ($unit in $army.getHeroes())
+		#unitTemplate($unit)
+	#end
+	
 	<h2>Unités de base</h2>
 	#foreach ($unit in $army.getCoreUnits())
+		#unitTemplate($unit)
+	#end
+
+	<h2>Unités spéciales</h2>
+	#foreach ($unit in $army.getSpecialUnits())
 		#unitTemplate($unit)
 	#end
 	

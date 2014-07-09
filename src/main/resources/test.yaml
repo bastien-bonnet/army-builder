@@ -11,6 +11,22 @@ rules:
     name: rule 2
     description: rule 2 is better than rule 1
 
+lords:
+  -
+    name: big lord
+    profiles:
+      -
+        name: big lord
+        m: 4
+
+heroes:
+  -
+    name: captain
+    profiles:
+      -
+        name: captain
+        m: 3
+
 coreUnits:
   -
     name: Archers
@@ -20,6 +36,18 @@ coreUnits:
         m: 4
         ws: 3
         bs: 4
+
+specialUnits:
+  -
+    name: ranger
+    profiles:
+      -
+        name: ranger
+        m: 6
+
+      -
+        name: elite ranger
+        m: 7
 
 rareUnits:
   -
