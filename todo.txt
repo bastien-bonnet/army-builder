@@ -6,4 +6,5 @@ java :
 	manage exception when reading vm or writing export
 
 features:
+	revoir le type java des règles spéciales
 	gérer les différents profils dans unités
