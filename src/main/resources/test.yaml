@@ -30,6 +30,7 @@ heroes:
 coreUnits:
   -
     name: Archers
+    unitMin: 10
     profiles:
       -
         name: Archer
@@ -40,6 +41,8 @@ coreUnits:
 specialUnits:
   -
     name: ranger
+    unitMin: 5
+    unitMax: 15
     profiles:
       -
         name: ranger
