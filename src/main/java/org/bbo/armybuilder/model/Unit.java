@@ -10,6 +10,7 @@ public class Unit {
 	private List<String> equipment = new ArrayList<String>();
 	private List<Option> options = new ArrayList<Option>();
 	private int unitMin, unitMax;
+	private int points, pointsPerModel;
 
 	public String getName() {
 		return name;
@@ -77,6 +78,22 @@ public class Unit {
 			string = "-";
 		}
 		return string;
+	}
+
+	public int getPoints() {
+		return points;
+	}
+
+	public void setPoints(int points) {
+		this.points = points;
+	}
+
+	public int getPointsPerModel() {
+		return pointsPerModel;
+	}
+
+	public void setPointsPerModel(int pointsPerModel) {
+		this.pointsPerModel = pointsPerModel;
 	}
 
 	@Override

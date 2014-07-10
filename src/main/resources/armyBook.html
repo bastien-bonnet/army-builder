@@ -20,6 +20,9 @@
 <body>
 	#macro (unitTemplate $unit)	
 		<h3>$unit.getName()</h3>
+		<span>
+			#if ($unit.getPointsPerModel() > 0) $unit.getPointsPerModel() pt par figurine #else $unit.getPoints() pt #end
+		</span>
 		<table class="profiles">
 			<tr>
 				<th></th>

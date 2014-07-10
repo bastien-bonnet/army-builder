@@ -14,6 +14,7 @@ rules:
 lords:
   -
     name: big lord
+    points: 150
     profiles:
       -
         name: big lord
@@ -22,6 +23,7 @@ lords:
 heroes:
   -
     name: captain
+    points: 90
     profiles:
       -
         name: captain
@@ -30,6 +32,7 @@ heroes:
 coreUnits:
   -
     name: Archers
+    pointsPerModel: 10
     unitMin: 10
     profiles:
       -
