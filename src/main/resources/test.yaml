@@ -12,14 +12,48 @@ rules:
     description: rule 2 is better than rule 1
 
 lords:
-  -
-    name: big lord
-    points: 150
+  - 
+    name: GLADE LORD
+    points: 145
     profiles:
-      -
-        name: big lord
-        troopType: personnage
-        m: 4
+      - 
+        name: Glade Lord
+        troopType: Infanterie (personnage)
+        m: 5
+        ws: 7
+        bs: 7
+        s: 4
+        t: 3
+        w: 3
+        i: 8
+        a: 4
+        ld: 10
+
+    equipment:
+      - Arme de base
+      - Arc long Asrai
+      - Armure légère
+
+    options:
+      - 
+        name: Peut avoir un des choix suivants
+        options:
+          - 
+            name: Lance Asrai
+            points: 3
+          - 
+            name: Arme de base additionnelle (sauf s'il a une monture)
+            points: 3
+          - 
+            name: Arme lourde
+            points: 6
+      - 
+        name: Peut avoir un bouclier
+        points: 3
+
+
+
+
 
 heroes:
   -
