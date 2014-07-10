@@ -18,6 +18,7 @@ lords:
     profiles:
       -
         name: big lord
+        troopType: personnage
         m: 4
 
 heroes:
@@ -37,6 +38,7 @@ coreUnits:
     profiles:
       -
         name: Archer
+        troopType: Infanterie
         m: 4
         ws: 3
         bs: 4

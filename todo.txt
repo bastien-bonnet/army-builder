@@ -6,5 +6,4 @@ java :
 	manage exception when reading vm or writing export
 
 features:
-	catégorie: cavalerie, infanterie
 	gérer les différents profils dans unités

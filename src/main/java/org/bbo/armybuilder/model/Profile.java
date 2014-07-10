@@ -2,6 +2,7 @@ package org.bbo.armybuilder.model;
 
 public class Profile {
 	private String name;
+	private String troopType = "";
 	private int m, ws, bs, s, t, w, i, a, ld;
 
 	public String getName() {
@@ -10,6 +11,14 @@ public class Profile {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getTroopType() {
+		return troopType;
+	}
+
+	public void setTroopType(String troopType) {
+		this.troopType = troopType;
 	}
 
 	public int getM() {

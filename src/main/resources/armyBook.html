@@ -35,6 +35,7 @@
 				<th>I</th>
 				<th>A</th>
 				<th>Cd</th>
+				<th></th>
 			</tr>
 			#foreach ($profile in $unit.getProfiles())
 				<tr>
@@ -48,6 +49,7 @@
 					<td>$profile.getI()</td>
 					<td>$profile.getA()</td>
 					<td>$profile.getLd()</td>
+					<td>$profile.getTroopType()</td>
 				</tr>
 			#end
 		</table>
