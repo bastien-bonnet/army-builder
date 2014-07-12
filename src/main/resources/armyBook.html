@@ -12,8 +12,10 @@
 		width: 15em;
 		padding-right: 1em;
 	}
-	td {
+	th, td {
 		text-align: center;
+		padding-left: .25em;
+		padding-right: .25em;
 	}
 </style>
 </head>
@@ -116,16 +118,27 @@
 		#unitTemplate($unit)
 	#end
 	
-	
-	
-	
-	<div style="height: 1000px;"></div>
-	
-	<h2>Special rules</h2>
+	<h2>Règles spéciales d'armée</h2>
 	#foreach ($rule in $army.getRules())
 		<h3 id="$rule.getName()">$rule.getName()</h3>
 		<p>$rule.getDescription()</p>
-		<br>
+		<ul>
+			#foreach ($subrule in $rule.getSubrules())
+				<li>$subrule</li>
+			#end
+		</ul>
+	#end
+	
+	<h2>Armurerie</h2>
+	#foreach ($item in $army.getItems())
+		<h3>$item.getName()</h3>
+		#if ($item.getWeapon())
+			<table>
+				<tr><th>Portée</th><th>Force</th><th>Règles spéciales</th></tr>
+				<tr><td>$item.getWeapon().getRange()</td><td>$item.getWeapon().getStrengh()</td><td>$item.getWeapon().getRules()</td></tr>
+			</table>
+		#end
+		<p>$item.getDescription()</p>
 	#end
 	
 	$inexistingParameter

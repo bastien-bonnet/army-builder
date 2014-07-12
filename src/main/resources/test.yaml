@@ -1,39 +1,57 @@
 name: Empire
 
 rules:
-  -
-    &rule1
-    name: rule 1
-    description: description of rule 1
+  - 
+    &bienfaitsDesAieux
+    name: Bienfait des aïeux
+    description: Toute figurine dotée de cette règle spéciale qui se trouve dans une forêt à +1 à toutes ses tentatives de lance ment de sort.
 
+  - 
+    &embuscadeDesRacinesDuMonde
+    name: Embuscade des racines du monde
+    description: >
+      Une armée de Wood Elves peut toujours placer une forêt supplémentaire sur le champ de bataille. Placez-la au déploiement, avant de placer les unités : il doit se trouver intégralement dans votre moité de table. Cette forêt n'est pas un terrain mystérieux – annoncez son type lorsque vous la déployez. Si elle ne tient pas sur votre moitié de table, déplacez d'autres éléments de décors de la plus courte distance nécessaire pour que la forêt puisse être placée. Si la chose est toujours impossible, ou si le scénario prévoit que les Wood Elves n'ont pas de moité de table où se déployer, cette forêt supplémentaire n'est pas utilisée.
+  - &espritDesForets
+    name: Esprit des forêts
+    description: Une figurine dotée de cette règle spéciale a la règle spéciale guide des forêts et ses attaques (de tir et de corps à corps) sont magiques. S'il ne s'agit pas d'une monture, elle a en outre une sauvegarde invulnérable de 6+ et est immunisée à la psychologie
+  - 
+    &rodeurDesForets
+    name: Rôdeur des forêts
+    description: >
+      Guide des forêts. En plus, si au moins la moité des figurines d'une unité sont dans une forêt :
+    subrules:
+      - Toutes les figurines de l'unité qui ont la règle spéciale rôdeur des forêts tirent sur 1 rang de plus que la normale (cela signifie généralement que si l'unité effectue un tir de volée, toutes les figurines des 3 pronniers rangs et la moitié de celles du quatrième et des suivants pourront tirer).
+      - Toutes les figurines de l'unité qui ont la règle rôdeur des forêts portent des attaques de soutien sur 1 rang de plus que la normale (se cumule avec d'autres règles spéciales permettant de combattre sur des rangs supplémentaires).
   -
-    &rule2
-    name: rule 2
-    description: rule 2 is better than rule 1
+    &serreDeKurnous
+    name: Serre de Kurnous
+    description: Après que les deux camps se sont déployés, mais avant le début du premier tour, vérifiez si le général ennemi est à 36" ou moins et en ligne de vue d'au moins une de vos figurines avec cette règle spéciale. Si c'est le cas, il subit immédiatiement 1 touche de F3 sans sauvegarde d'armure. Sinon, cette règle n'a aucun effet.
+      - Toutes les figurines de l'unité qui ont la règle spéciale rôdeur des forêts (pas leurs montures) relancent les jets pour blesser d'1 lorsqu'elles effectuent des attaques du corps à corps.
+
+items:
+  - 
+    name: Arc long asrai
+    weapon: 
+      range: 30
+      strengh: 3
+      rules:
+        - perforant
+        - tir de volée
 
 lords:
   - 
     name: GLADE LORD
     points: 145
     profiles:
-      - 
-        name: Glade Lord
-        troopType: Infanterie (personnage)
-        m: 5
-        ws: 7
-        bs: 7
-        s: 4
-        t: 3
-        w: 3
-        i: 8
-        a: 4
-        ld: 10
-
+      - {name: Glade Lord, m: 5, ws: 7, bs: 7, s: 4, t: 3, w: 3, i: 8, a: 4, ld: 10, troopType: Infanterie (personnage)}
     equipment:
       - Arme de base
       - Arc long Asrai
       - Armure légère
-
+    rules:
+      - name: Frappe toujours en premier
+      - *rodeurDesForets
+      - *serreDeKurnous
     options:
       - 
         name: Peut avoir un des choix suivants
@@ -50,10 +68,6 @@ lords:
       - 
         name: Peut avoir un bouclier
         points: 3
-
-
-
-
 
 heroes:
   -
@@ -104,9 +118,6 @@ rareUnits:
         m: 8
         ws: 3
 
-    rules:
-      - *rule2
-      - *rule1
 
     equipment:
       - Arme lourde

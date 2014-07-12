@@ -11,6 +11,8 @@ public class Army {
 	private List<Unit> specialUnits = new ArrayList<Unit>();
 	private List<Unit> rareUnits = new ArrayList<Unit>();
 	private List<Rule> rules = new ArrayList<Rule>();
+	private List<Item> items = new ArrayList<Item>();
+	private List<Item> magicItems = new ArrayList<Item>();
 
 	public String getName() {
 		return name;
@@ -78,30 +80,27 @@ public class Army {
 		this.rules = rules;
 	}
 
+	public List<Item> getItems() {
+		return items;
+	}
+
+	public void setItems(List<Item> items) {
+		this.items = items;
+	}
+
+	public List<Item> getMagicItems() {
+		return magicItems;
+	}
+
+	public void setMagicItems(List<Item> magicItems) {
+		this.magicItems = magicItems;
+	}
+
 	@Override
 	public String toString() {
-		StringBuilder stringRepresentation = new StringBuilder("Army:\n");
-
-		for(Unit unit : lords){
-			stringRepresentation.append("  " + unit.toString() + "\n");
-		}
-		for(Unit unit : heroes){
-			stringRepresentation.append("  " + unit.toString() + "\n");
-		}
-		for(Unit unit : coreUnits){
-			stringRepresentation.append("  " + unit.toString() + "\n");
-		}
-		for(Unit unit : specialUnits){
-			stringRepresentation.append("  " + unit.toString() + "\n");
-		}
-		for(Unit unit : rareUnits){
-			stringRepresentation.append("  " + unit.toString() + "\n");
-		}
-
-		for (Rule rule : rules){
-			stringRepresentation.append(" " + rule.toString() + "\n");
-		}
-
-		return stringRepresentation.toString();
+		return "Army [name=" + name + ", lords=" + lords + ", heroes=" + heroes
+				+ ", coreUnits=" + coreUnits + ", specialUnits=" + specialUnits
+				+ ", rareUnits=" + rareUnits + ", rules=" + rules + ", items="
+				+ items + ", magicItems=" + magicItems + "]";
 	}
 }
