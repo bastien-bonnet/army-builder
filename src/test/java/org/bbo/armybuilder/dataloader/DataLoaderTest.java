@@ -28,7 +28,7 @@ public class DataLoaderTest {
 		Army army = DataLoader.load(SAMPLE_YAML);
 		
 		// WHEN
-		String armyString = DataLoader.fillTemplateWithArmyData("src/main/resources/armyBook.html", army);
+		String armyString = DataLoader.fillTemplateWithArmyData(TemplateType.HTML, army);
 
 
 		// THEN

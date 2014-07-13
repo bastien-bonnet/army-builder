@@ -28,11 +28,11 @@ public class DataLoader {
 		return army;
 	}
 
-	public static String fillTemplateWithArmyData(String templatePath, Army army) {
+	public static String fillTemplateWithArmyData(TemplateType templateType, Army army) {
 		VelocityEngine velocityEngine = new VelocityEngine();
 		velocityEngine.init();
 
-		Template template = velocityEngine.getTemplate(templatePath, "UTF-8");
+		Template template = velocityEngine.getTemplate(templateType.getTemplatePath(), "UTF-8");
 
 		VelocityContext velocityContext = new VelocityContext();
 		velocityContext.put("army", army);
