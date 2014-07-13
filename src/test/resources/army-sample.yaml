@@ -1,4 +1,4 @@
-name: Empire
+name: Elfes sylvains
 
 rules:
   - 
@@ -37,6 +37,33 @@ items:
       rules:
         - perforant
         - tir de volée
+  - 
+    name: Javeline de bruyère noire
+    weapon: 
+      range: 12
+      strengh: utilisateur
+      rules:
+        - attaques empoisonnées
+        - perforant
+  - 
+    name: Lance asrai (figurine à pied)
+    weapon:
+      range: corps à corps
+      strengh: utilisateur
+      rules:
+        - combat sur plusieurs rangs
+        - perforant
+
+  - 
+    name: Lance asrai (figurine montée)
+    weapon:
+      range: corps à corps
+      strengh: +1*
+      rules:
+        - combat sur plusieurs rangs
+        - perforant
+    description: >
+      * uniquement en charge
 
 lords:
   - 
