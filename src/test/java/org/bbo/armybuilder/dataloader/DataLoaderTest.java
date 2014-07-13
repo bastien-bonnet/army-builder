@@ -11,7 +11,7 @@ import org.junit.Test;
 
 public class DataLoaderTest {
 
-	private static final String SAMPLE_YAML = "src/main/resources/test.yaml";
+	private static final String SAMPLE_YAML = "src/test/resources/army-sample.yaml";
 
 	@Test
 	public void should_return_army_with_units_when_loading_army() throws FileNotFoundException {
