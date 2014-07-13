@@ -32,4 +32,10 @@ public class Option {
 	public void setOptions(List<Option> options) {
 		this.options = options;
 	}
+	@Override
+	public String toString() {
+		return "Option [name=" + name + ", points=" + points
+				+ ", pointsPerModel=" + pointsPerModel + ", options=" + options
+				+ "]";
+	}
 }
