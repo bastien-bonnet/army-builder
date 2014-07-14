@@ -65,6 +65,65 @@ items:
     description: >
       * uniquement en charge
 
+  - 
+    name: &f1 Matras cabalistiques
+    weapon:
+      range: 30
+      strengh: 3
+      rules:
+        - Tir de volée
+    description: Les blessures causées par des Matras cabalistiques on un modificateur de -3 au jet de sauvegarde d'armure
+
+  - 
+    name: &f2 Flèches de fléau des furies
+    weapon:
+      range: 30
+      strengh: 3
+      rules: 
+        - attaques empoisonnées
+        - perforant
+        - tir de volée
+  - 
+    name: &f3 Traits de feu lunaire
+    weapon:
+      range: 30
+      strengh: 3
+      rules:
+        - attaques enflammées
+        - perforant
+        - tir de volée
+    description: Les touches causées par des Traits de feu lunaire ont un modificateur de +1 pour blesser les unités majoritairement composées de figurines des forces de l'Ordre.
+  - 
+    name: &f4 Sagettes de feu stellaire
+    weapon:
+      range: 30
+      strengh: 3
+      rules:
+        - attaques enflammées
+        - perforant
+        - tir de volée
+    description: Les touches causées par des Sagettes de feu stellaire ont un modificateur de +1 pour blesser les unités majoritairement composées de figurines des forces de la Destruction.
+
+  - 
+    name: &f5 Échardes d'archère hâtive
+    weapon:
+      range: 30
+      strengh: 3
+      rules:
+        - perforant
+        - tir de volée
+        - tirs multiples (2)
+
+  - 
+    name: &f6 Pointes de parabole pure
+    weapon:
+      range: 30
+      strengh: 3
+      rules:
+        - perforant
+        - tir de volée
+    description: Aucune pénalité pour toucher.
+
 lords:
   - 
     name: GLADE LORD
@@ -95,6 +154,35 @@ lords:
       - 
         name: Peut avoir un bouclier
         points: 3
+      - 
+        name: Peut avoir un des types de flèches enchantées suivants
+        options: &f
+          - name: *f1
+            points: 3
+          - name: *f2
+            points: 3
+          - name: *f3
+            points: 4
+          - name: *f4
+            points: 4
+          - name: *f5
+            points: 4
+          - name: *f6
+            points: 5
+      - 
+        name: Peut avoir une des montures suivantes
+        options:
+          - name: Coursier elfique
+            points: 20
+          - name: Great eagle
+            points: 50
+          - name: Great stag
+            points: 65
+          - name: Forest dragon
+            points: 300
+      - 
+        name: Objets magiques jusqu'à
+        points: 100
 
 heroes:
   -
