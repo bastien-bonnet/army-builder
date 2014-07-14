@@ -76,7 +76,14 @@
 		<h4>Options :</h4>
 		#macro(optionTemplate $option)
 			<li>
-				$option.getName() : #if ($option.getPointsPerModel() > 0) $option.getPointsPerModel() pt par figurine #else $option.getPoints() pt #end
+				$option.getName() : 
+				#if ($option.getPointsPerModel() > 0) 
+					$option.getPointsPerModel() pt par figurine 
+				#elseif ($option.getPoints() > 0)
+					$option.getPoints() pt 
+				#elseif ($option.getOptions().isEmpty())
+					Gratuit
+				#end
 				<ul>
 					#foreach($innerOption in $option.getOptions())
 						#optionTemplate($innerOption)
