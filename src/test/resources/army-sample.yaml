@@ -27,6 +27,9 @@ rules:
     name: Serre de Kurnous
     description: Après que les deux camps se sont déployés, mais avant le début du premier tour, vérifiez si le général ennemi est à 36" ou moins et en ligne de vue d'au moins une de vos figurines avec cette règle spéciale. Si c'est le cas, il subit immédiatiement 1 touche de F3 sans sauvegarde d'armure. Sinon, cette règle n'a aucun effet.
       - Toutes les figurines de l'unité qui ont la règle spéciale rôdeur des forêts (pas leurs montures) relancent les jets pour blesser d'1 lorsqu'elles effectuent des attaques du corps à corps.
+  - &abattage
+    name: Abattage
+    description: Une figurine avec cette règle spéciale peut effectuer une attaque d'abattage à la place de ses attaques normales de corps à corps. Dans ce cas il faut le déclarer avant les jets pour toucher. Pour la résoudre, désignez une figurine ennemie en contact socle à socle. Celle-ci doit réussir un test d'Initiative ou subir 1D6 blessures sans sauvegarde d'armure. Un personnage avec cette règle spéciale peut effectuer un abattage en défi.
 
 items:
   - 
@@ -183,6 +186,55 @@ lords:
       - 
         name: Objets magiques jusqu'à
         points: 100
+
+  - 
+    name: SPELLWEAVER
+    points: 185
+    profiles:
+      - {name: Spellweaver, m: 5, ws: 4, bs: 4, s: 3, t: 3, w: 3, i: 5, a: 1, ld: 9, troopType: Infanterie (Personnage)}
+    equipment:
+      - Arme de base
+    rules:
+      - name: Frappe toujours en premier
+    options:
+      - name: niveau 4
+        points: 35
+      - name: arc long Asrai
+        points: 5
+      - name: monture
+        options:
+          - name: coursier elfique
+            points: 20
+          - name: great eagle
+            points: 50
+          - name: Unicorn
+            points: 60
+      - name: objets magiques jusqu'à
+        points: 100
+      
+  - name: TREEMAN ANCIENT
+    points: 290
+    profiles:
+      - {name: Treeman Ancient, m: 5, ws: 4, bs: 4, s: 5, t: 6, w: 6, i: 2, a: 3, ld: 10, troopType: Monstre (Personnage)}
+    rules:
+      - *bienfaitsDesAieux
+      - name: Inflammable
+      - *espritDesForets
+      - name: Grande cible
+      - name: Peau écailleuse (3+)
+      - name: Tenace
+      - name: Terreur
+      - *abattage
+    magic: Sorcier de niveau 2 qui connait des sorts du domaine de la Vie.
+    options:
+      - name: peut recevoir une des améliorations suivantes
+        options:
+          - name: Sorcier de niveau 3
+            points: 35
+          - name: Sorcier de niveau 4
+            points: 70
+      - name: racines étrangleuses
+        points: 20
 
 heroes:
   -
