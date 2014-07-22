@@ -8,6 +8,7 @@ public class Unit {
 	private List<Profile> profiles = new ArrayList<Profile>();
 	private List<Rule> rules = new ArrayList<Rule>();
 	private List<String> equipment = new ArrayList<String>();
+	private String magic;
 	private List<Option> options = new ArrayList<Option>();
 	private int unitMin, unitMax;
 	private int points, pointsPerModel;
@@ -42,6 +43,14 @@ public class Unit {
 
 	public void setEquipment(List<String> equipment) {
 		this.equipment = equipment;
+	}
+
+	public String getMagic() {
+		return magic;
+	}
+
+	public void setMagic(String magic) {
+		this.magic = magic;
 	}
 
 	public List<Option> getOptions() {
